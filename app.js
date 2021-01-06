@@ -4,27 +4,103 @@ let date = new Date();
 
 let text = div.textContent = new Date();*/
 
-function hour (e) {
-	let date = new Date();
-	let h = date.getHours();
+function hour(){
+	today = new Date;
+	h = today.getHours();
+	m = today.getMinutes();
+	s = today.getSeconds();
+	
 	if (h < 0) {
-		"0"+ h;	
+		h = "0"+h;	
 	}
-	let m = date.getMinutes();
 	if (m < 0) {
-		"0"+ m;	
+		h = "0"+m;	
 	}
-	let s = date.getSeconds();
 	if (s < 0) {
-		s = "0"+ s;	
+		s = "0"+s;	
 	}
 
-
-
-
-	let result = 'il est ' + h + ':' + m + ':' + s + ' .';
+	result =  h + ':' + m + ':' + s ;
 	document.getElementById('heur').innerHTML = result;
-	setInterval(hour(), 1000);
+	document.getElementById('heur').textContent = result;
+
+	setTimeout(hour, 1000);
+	
 }
 
 hour();
+
+/*
+	function showTime(){
+				var date = new Date();
+				var h = date.getHours(); // 0 - 23
+				var m = date.getMinutes(); // 0 - 59
+				var s = date.getSeconds(); // 0 - 59
+				var session = "AM";
+				
+				if(h >= 12){
+					h = h - 12;
+					session = "PM";
+				}
+
+				if(h == 0){
+					h = 12;
+				}
+
+				h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+
+				var time = h + ":" + m + ":" + s + " " + session;
+				document.getElementById("MyClockDisplay").innerText = time;
+				document.getElementById("MyClockDisplay").textContent = time;
+
+				setTimeout(showTime, 1000);
+			}
+
+			showTime();
+
+
+
+
+*/
+
+
+/*
+function showTime(){
+				var date = new Date();
+				var h = date.getHours(); // 0 - 23
+				var m = date.getMinutes(); // 0 - 59
+				var s = date.getSeconds(); // 0 - 59
+				var session = "AM";
+				
+				if(h >= 12){
+					h = h - 12;
+					session = "PM";
+				}
+
+				if(h == 0){
+					h = 12;
+				}
+
+				h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+
+				var time = h + ":" + m + ":" + s + " " + session;
+				document.getElementById("MyClockDisplay").innerText = time;
+				document.getElementById("MyClockDisplay").textContent = time;
+
+				setTimeout(showTime, 1000);
+			}
+
+			showTime();
+
+
+
+
+
+
+
+
+*/
