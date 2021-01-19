@@ -1,5 +1,7 @@
 body {
 	@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+	background-image: url("watch.jpg");
+	background-size: cover;
 }
 
 div {
